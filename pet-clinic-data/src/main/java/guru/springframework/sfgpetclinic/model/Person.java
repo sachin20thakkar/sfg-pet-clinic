@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
-public class Person {
+public class Person extends BaseEntity {
     String firstName;
     String lastName;
 }

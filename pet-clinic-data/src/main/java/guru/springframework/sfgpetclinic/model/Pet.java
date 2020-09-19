@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
-public class Pet {
+public class Pet extends BaseEntity {
     PetType petType;
     Owner owner;
     LocalDateTime birthDate;

@@ -8,13 +8,14 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
+
 public class DataLoader implements CommandLineRunner {
     private final OwnerServiceMap ownerServiceMap;
     private final VetServiceMap vetServiceMap;
 
-    public DataLoader() {
-        this.ownerServiceMap = new OwnerServiceMap();
-        this.vetServiceMap = new VetServiceMap();
+    public DataLoader(OwnerServiceMap ownerServiceMap, VetServiceMap vetServiceMap) {
+        this.ownerServiceMap = ownerServiceMap;
+        this.vetServiceMap = vetServiceMap;
     }
 
     @Override
